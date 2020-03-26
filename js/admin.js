@@ -2,7 +2,7 @@ new Vue({
 	el: "#topBody",
 	data() {
 		return {
-			path: "ws://localhost:8081/lottery/socket?name=",
+			path: `${location.protocol === 'https' ? 'wss' : 'ws'}://${location.host}/websocket`,
 			logined: false,
 			lottery: false,
 			adminLotteryied: false,
